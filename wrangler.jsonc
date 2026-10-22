@@ -1,0 +1,13 @@
+// Cloudflare Workers static assets — serves the Next.js static export in out/.
+// https://developers.cloudflare.com/workers/static-assets/
+{
+  "name": "barisalas",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // Unknown paths get out/404.html with a 404 status (not a blank page).
+    "not_found_handling": "404-page",
+    // Matches next.config trailingSlash: /galeri -> /galeri/
+    "html_handling": "force-trailing-slash"
+  }
+}

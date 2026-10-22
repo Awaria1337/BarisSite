@@ -1,0 +1,90 @@
+[
+  {
+    "file": "salon-1.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-1.png",
+    "width": 2268,
+    "height": 4032,
+    "category": "salon",
+    "alt_tr": "Barış Alaş salonunda beyaz bakım/epilasyon yatağı, malzeme arabası, beyaz dolap ve vantilatör bulunan aydınlık bakım odası",
+    "faceVisible": false,
+    "quality": "ok",
+    "notes": "Portrait. Sharp iPhone ultra-wide shot, no watermark/text. Utilitarian back room: towel on rack, plastic bags/clutter under bed and on cabinet top. Old site mislabeled it alt='imza kesim' and used it as hero + OG image. Better as a 'private treatment room' shot after cleanup/crop."
+  },
+  {
+    "file": "salon-2.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-2.png",
+    "width": 2268,
+    "height": 4032,
+    "category": "salon",
+    "alt_tr": "Kahverengi deri yıkama koltuklarının arkasından görülen geniş salon: manikür masaları, bekleme koltukları ve aydınlatmalı ayna istasyonları",
+    "faceVisible": false,
+    "quality": "poor",
+    "notes": "Portrait. Sharp but photographer's maroon sleeve/arm fills the right ~third of the frame and a hand edge at bottom-left. Would need heavy crop. Old-site alt 'balyaj n°03' is wrong."
+  },
+  {
+    "file": "salon-3.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-3.png",
+    "width": 4032,
+    "height": 2268,
+    "category": "salon",
+    "alt_tr": "Barış Alaş salonunun geniş açı görünümü: sol tarafta ışıklı ürün rafları, ortada bekleme oturma grubu, sağda büyük ayna ve deri koltuklar, cadde tarafında jaluzili pencereler",
+    "faceVisible": false,
+    "quality": "good",
+    "notes": "Landscape. Sharp, bright, no people, no watermark. Parked cars visible through window (plates not legible at web size, check at full res). Strong hero/about candidate. Old-site alt 'özel gün stili' is wrong."
+  },
+  {
+    "file": "salon-4.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-4.png",
+    "width": 4032,
+    "height": 2268,
+    "category": "salon",
+    "alt_tr": "Yıkama koltuklarının arkasından salonun genel görünümü: tropikal duvar kağıtlı manikür köşesi, bekleme alanı ve arka planda ışıklı aynalı kesim istasyonları",
+    "faceVisible": false,
+    "quality": "ok",
+    "notes": "Landscape. Sharp; right ~third is a blank wall + mirror frame edge, so crop to left 2/3. No people. Old-site alt 'gelin' is wrong."
+  },
+  {
+    "file": "salon-5.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-5.png",
+    "width": 2268,
+    "height": 4032,
+    "category": "beauty",
+    "alt_tr": "Tropikal yaprak desenli duvarın önünde iki kişilik manikür masası, pembe tonlu sandalyeler ve UV lamba bulunan manikür-pedikür köşesi",
+    "faceVisible": false,
+    "quality": "good",
+    "notes": "Portrait. Sharp, clean, no people/text. Large empty floor in lower half (crop). Shows nail/manikür station = beauty service area (also usable as salon interior). Old-site alt 'keratin bakımı' is wrong."
+  },
+  {
+    "file": "salon-6.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-6.png",
+    "width": 4032,
+    "height": 2268,
+    "category": "salon",
+    "alt_tr": "Barış Alaş salonunun bekleme alanı: siyah yuvarlak sehpa etrafında bej koltuklar, koyu deri kanepe, arkada ışıklı ayna istasyonları ve manikür köşesi",
+    "faceVisible": false,
+    "quality": "good",
+    "notes": "Landscape. Sharp, bright. Dark blurred object (photographer's elbow/sleeve) intrudes at left edge and a pinkish blur top-left — crop ~8% from left. Best wide 'salon' landscape along with salon-3/salon-8."
+  },
+  {
+    "file": "salon-7.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-7.png",
+    "width": 2268,
+    "height": 4032,
+    "category": "salon",
+    "alt_tr": "Yuvarlak siyah sehpa ve bej koltuklardan oluşan bekleme alanı, arka planda ürün rafı, ring ışık ve tropikal desenli manikür köşesi",
+    "faceVisible": false,
+    "quality": "good",
+    "notes": "Portrait version of the salon-6 scene. Sharp, clean, no people. Good for mobile hero. Old-site alt 'arka detay' is wrong."
+  },
+  {
+    "file": "salon-8.png",
+    "sourceUrl": "https://baris-alas-6bd1.vercel.app/salon-8.png",
+    "width": 4032,
+    "height": 2268,
+    "category": "salon",
+    "alt_tr": "Salonun giriş tarafı: solda sarı ve kumral tonlarda kaynak saç (protez saç) örnekleri, ortada ürün vitrini, yıkama koltukları, ahşap çıtalı bölme ve cam giriş kapısı",
+    "faceVisible": false,
+    "quality": "good",
+    "notes": "Landscape. Sharp, bright, no people. Left edge shows hanging hair-extension wefts (useful crop for the extension/kaynak saç service). Very slight wide-angle distortion. Old-site alt 'kısa kesim' is wrong."
+  }
+]

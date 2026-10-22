@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* Design tokens — notes/DESIGN.md (v2, reference-led: warm ivory + kakao) */
+@theme {
+  --color-krem: #f7f0e8; /* page background */
+  --color-fildisi: #fffdf9; /* raised surfaces, cards */
+  --color-nude: #eadbcd; /* soft fills, chips */
+  --color-cizgi: #e0cfbf; /* hairlines, borders */
+  --color-murekkep: #1b1612; /* text, dark sections */
+  --color-gri: #6b5f57; /* secondary text (AA on krem) */
+  --color-kakao: #7b5238; /* primary accent */
+  --color-kakao-koyu: #5e3e2a; /* accent hover/pressed */
+  --color-karamel: #c49a74; /* accent on dark backgrounds */
+
+  --font-display: var(--font-inter-tight), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-italic: var(--font-inter-tight-italic), var(--font-inter-tight), sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee-x: marquee-x var(--marquee-duration, 30s) linear infinite;
+  --animate-marquee-y: marquee-y var(--marquee-duration, 30s) linear infinite;
+}
+
+@keyframes marquee-x {
+  to {
+    transform: translateX(calc(-50% - var(--marquee-gap, 0px) / 2));
+  }
+}
+
+@keyframes marquee-y {
+  to {
+    transform: translateY(calc(-50% - var(--marquee-gap, 0px) / 2));
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-krem font-sans text-murekkep;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-kakao);
+    outline-offset: 3px;
+  }
+
+  /* Kakao is under 3:1 on dark sections; use karamel there. */
+  .bg-murekkep :focus-visible,
+  .hwf-root :focus-visible {
+    outline-color: var(--color-karamel);
+  }
+
+  ::selection {
+    background: var(--color-nude);
+  }
+}
+
+@layer components {
+  /* Italic accent words in display headings (reference style). */
+  .accent {
+    @apply font-medium text-kakao italic;
+    font-family: var(--font-italic);
+    letter-spacing: -0.045em;
+  }
+
+  .eyebrow {
+    @apply text-sm font-medium text-kakao;
+  }
+}
+
+/* Paused by the MotionPause button. */
+[data-paused] .animate-marquee-x,
+[data-paused] .animate-marquee-y {
+  animation-play-state: paused;
+}
+
+/* Marquees stop for people who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-x,
+  .animate-marquee-y {
+    animation: none;
+  }
+
+  /* Testimonial columns become a plain scrollable list. */
+  .testimonials-columns {
+    max-height: 640px;
+    overflow-y: auto;
+  }
+  .testimonials-columns .animate-marquee-y {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .testimonials-columns .animate-marquee-y > [aria-hidden="true"] {
+    display: none;
+  }
+  .testimonials-columns .desktop-columns {
+    height: auto;
+    min-height: 0;
+    align-items: start;
+  }
+  .testimonials-columns .desktop-columns > div {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+}
+
+/* View transitions between pages (React <ViewTransition> default). */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 260ms;
+  animation-timing-function: var(--ease-out-soft);
+}
