@@ -49,7 +49,7 @@ export default function KvkkPage() {
         </p>
         <h2>Yurt dışına aktarım</h2>
         <p>
-          Web sitemiz Cloudflare altyapısında barındırılır; WhatsApp hizmeti Meta tarafından sağlanır. Bu hizmetlerin
+          Web sitemiz Vercel altyapısında barındırılır; WhatsApp hizmeti Meta tarafından sağlanır. Bu hizmetlerin
           sunucuları yurt dışında bulunabileceğinden, bu kanallarla ilettiğiniz veriler KVKK m.9 kapsamında yurt dışına
           aktarılabilir. Bu kanalları kullanmak istemezseniz bize telefonla ya da salonumuza gelerek ulaşabilirsiniz.
         </p>
