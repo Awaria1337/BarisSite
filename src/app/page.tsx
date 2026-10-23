@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Star } from "lucide-react";
+import { ArrowUpRight, Gem, MapPin, Phone, Star } from "lucide-react";
 import {
   BrandsMarquee,
   CtaBanner,
@@ -12,7 +12,7 @@ import {
 } from "@/components/blocks";
 import { OpenNow } from "@/components/open-now";
 import Picture from "@/components/picture";
-import { address, contact, faq, mapsLink, rating, services, site } from "@/content/site";
+import { address, contact, directionsLink, faq, mapsLink, rating, services, site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -28,64 +28,83 @@ const featured = services.filter((s) => s.featured);
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className={cn(wrap, "grid gap-10 pb-16 pt-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-10")}>
-        <div className="order-2 lg:order-1">
-          <p className="eyebrow">{site.foundingYear}&apos;dan beri Çanakkale&apos;de kadın kuaförü</p>
-          <h1 className="mt-5 text-[3.1rem] sm:text-7xl xl:text-[5.6rem]">
-            Saçınıza ne yakışırsa, <span className="accent">onu</span> yaparız<span className="text-kakao">.</span>
-          </h1>
-          <p className="mt-7 max-w-[44ch] text-lg text-gri">
-            Kesimden renge, kaynak saçtan gelin saçına kadar. {address.landmark} içindeki salonumuzda size dürüst
-            tavsiye, doğal sonuç.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <WhatsAppButton>Randevu alın</WhatsAppButton>
-            <Link
-              href="/hizmetler/"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-murekkep/20 px-6 font-medium transition-colors hover:border-kakao hover:text-kakao"
-            >
-              Hizmetlerimiz
-            </Link>
-          </div>
-          <dl className="mt-10 grid max-w-lg grid-cols-2 gap-6 border-t border-cizgi pt-6 text-sm">
-            <div>
-              <dt className="flex items-center gap-1.5 text-gri">
-                <Star aria-hidden="true" className="size-4 fill-kakao text-kakao" />
-                Google puanı
-              </dt>
-              <dd className="mt-1">
-                <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-kakao">
-                  {rating.value.toLocaleString("tr-TR")} · {rating.count} yorum
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="flex items-center gap-1.5 text-gri">
-                <MapPin aria-hidden="true" className="size-4 text-kakao" />
-                {address.landmark}
-              </dt>
-              <dd className="mt-1 font-medium">
-                <OpenNow />
-              </dd>
-            </div>
-          </dl>
-        </div>
+      {/* Hero: full-bleed salon photo */}
+      <section className="relative isolate overflow-hidden bg-murekkep text-krem">
+        <Picture
+          id="salon-01"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-20"
+          imgClassName="object-[72%_center]"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-murekkep/75 lg:bg-transparent lg:bg-[linear-gradient(90deg,var(--color-murekkep)_0%,color-mix(in_oklab,var(--color-murekkep)_88%,transparent)_42%,color-mix(in_oklab,var(--color-murekkep)_25%,transparent)_100%)]"
+        />
+        <div className={cn(wrap, "flex min-h-[calc(100svh-4.5rem)] flex-col justify-center py-20 md:min-h-[calc(100svh-7rem)] lg:py-28")}>
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-karamel/40 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-karamel">
+              <span aria-hidden="true" className="size-1.5 rounded-full bg-karamel" />
+              {site.foundingYear}&apos;dan beri Çanakkale&apos;de
+            </p>
+            <h1 className="mt-6 text-[3.1rem] sm:text-7xl xl:text-[5.6rem]">
+              Saçınıza ne yakışırsa, <span className="block text-karamel">onu yaparız.</span>
+            </h1>
+            <p className="mt-7 max-w-[46ch] text-lg text-krem/80">
+              Kesimden renge, kaynak saçtan gelin saçına kadar. {address.landmark} içindeki salonumuzda dürüst tavsiye,
+              doğal sonuç.
+            </p>
 
-        <div className="relative order-1 lg:order-2">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
-            <Picture
-              id="hero-02"
-              fill
-              priority
-              sizes="(min-width: 1024px) 46vw, 100vw"
-              alt="Uzun, parlak saçlı kadın"
-            />
-          </div>
-          <div className="absolute -bottom-6 -left-4 hidden w-44 overflow-hidden rounded-2xl border-4 border-krem shadow-xl sm:block lg:-left-10 lg:w-52">
-            <div className="relative aspect-square">
-              <Picture id="salon-01" fill sizes="13rem" alt="Salonumuzun içi" />
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <WhatsAppButton variant="light">Randevu alın</WhatsAppButton>
+              <a
+                href={`tel:${contact.phoneE164}`}
+                className="inline-flex min-h-12 items-center gap-2 rounded-full border border-krem/25 px-6 font-medium transition-colors hover:border-karamel hover:text-karamel"
+              >
+                <Phone aria-hidden="true" className="size-4" />
+                Hemen ara
+              </a>
+              <a
+                href={directionsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex min-h-12 items-center gap-3 pr-2"
+              >
+                <span className="grid size-12 place-items-center rounded-full border border-krem/25 transition-colors group-hover:border-karamel group-hover:text-karamel">
+                  <MapPin aria-hidden="true" className="size-4" />
+                </span>
+                <span className="leading-tight">
+                  <span className="block font-medium">Yol tarifi al</span>
+                  <span className="block text-sm text-krem/70">Google Haritalar ile aç</span>
+                </span>
+              </a>
             </div>
+
+            <ul className="mt-12 grid max-w-xl gap-6 border-t border-krem/15 pt-8 sm:grid-cols-2">
+              <li className="flex gap-4">
+                <span aria-hidden="true" className="grid size-11 shrink-0 place-items-center rounded-full border border-karamel/40 text-karamel">
+                  <Gem className="size-4" />
+                </span>
+                <span>
+                  <span className="block text-xs font-medium uppercase tracking-[0.18em]">Kaynak saç uzmanı</span>
+                  <span className="mt-1.5 block text-sm text-krem/70">Doğal duran kaynak, protez saç ve peruk.</span>
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span aria-hidden="true" className="grid size-11 shrink-0 place-items-center rounded-full border border-karamel/40 text-karamel">
+                  <Star className="size-4" />
+                </span>
+                <span>
+                  <span className="block text-xs font-medium uppercase tracking-[0.18em]">
+                    Google&apos;da {rating.value.toLocaleString("tr-TR")} puan
+                  </span>
+                  <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="mt-1.5 block text-sm text-krem/70 hover:text-krem">
+                    {rating.count} yorum · <OpenNow as="span" />
+                  </a>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

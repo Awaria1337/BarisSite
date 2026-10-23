@@ -1,8 +1,8 @@
 import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react";
 import { PageHeader, WhatsAppButton, wrap } from "@/components/blocks";
 import { OpenNow } from "@/components/open-now";
-import Picture from "@/components/picture";
-import { address, contact, dayNamesTr, directionsLink, fullAddress, hours, mapsLink, site, social } from "@/content/site";
+import { MapEmbed } from "@/components/location-section";
+import { address, contact, dayNamesTr, directionsLink, hours, mapsLink, site, social } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -112,24 +112,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <a
-          href={directionsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={`Yol tarifi: ${fullAddress}`}
-          className="group relative block min-h-[28rem] overflow-hidden rounded-[2rem]"
-        >
-          <Picture id="exterior-01" fill sizes="(min-width: 1024px) 50vw, 100vw" alt="" />
-          <span className="absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl bg-krem/95 p-5 backdrop-blur">
-            <span>
-              <span className="block font-medium">{address.landmark}</span>
-              <span className="block text-sm text-gri">
-                {address.city} {address.district}
-              </span>
-            </span>
-            <ArrowUpRight aria-hidden="true" className="size-5 text-kakao transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </span>
-        </a>
+        <MapEmbed className="min-h-[28rem] lg:min-h-full" />
       </section>
     </>
   );

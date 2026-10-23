@@ -1,24 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 import { ViewTransition } from "react";
 import { WhatsAppIcon } from "@/components/icons";
+import { HideOn } from "@/components/hide-on";
 import { SalonJsonLd } from "@/components/json-ld";
+import { LocationSection } from "@/components/location-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { TopBar } from "@/components/top-bar";
 import { site, whatsappLink } from "@/content/site";
 import "./globals.css";
 
 // One family keeps the font payload small: Inter Tight upright (preloaded) for
 // headings and body, and its italic only for accent words (loaded on demand).
-const display = Inter_Tight({
+// Self-hosted from google/fonts, cut with fonttools (varLib.instancer wght=400:600 + pyftsubset to
+// Latin-1 + Turkish glyphs). License: ./fonts/OFL.txt.
+const display = localFont({
+  src: "./fonts/InterTight.woff2",
   variable: "--font-inter-tight",
-  subsets: ["latin", "latin-ext"],
+  weight: "400 600",
   display: "swap",
 });
 
-const italic = Inter_Tight({
+const italic = localFont({
+  src: "./fonts/InterTight-Italic.woff2",
   variable: "--font-inter-tight-italic",
-  subsets: ["latin", "latin-ext"],
+  weight: "400 600",
   style: "italic",
   display: "swap",
   preload: false,
@@ -48,10 +55,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           İçeriğe geç
         </a>
+        <TopBar />
         <SiteHeader />
         <ViewTransition>
           <main id="icerik">{children}</main>
         </ViewTransition>
+        <HideOn paths={["/iletisim/"]}>
+          <LocationSection />
+        </HideOn>
         <SiteFooter />
         <a
           href={whatsappLink()}

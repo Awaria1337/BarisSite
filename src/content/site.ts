@@ -335,3 +335,13 @@ export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encod
 export const directionsLink = `https://www.google.com/maps/dir/?api=1&destination=${address.geo.lat},${address.geo.lng}&destination_place_id=${address.placeId}`;
 
 export const fullAddress = `${address.neighborhood} ${address.street}, ${address.landmark}, ${address.postalCode} ${address.city} ${address.district}`;
+
+// Keyless Google Maps embed (no API key); allowed in CSP frame-src.
+export const mapEmbedLink = `https://www.google.com/maps?q=${encodeURIComponent(
+  `${site.name}, ${address.landmark}, ${address.city}`,
+)}&hl=tr&z=16&output=embed`;
+
+/** "Her gün 09:00–19:00" when every day shares the same hours. */
+export const hoursSummary = hours.every((h) => h.open === hours[0].open && h.close === hours[0].close)
+  ? `Her gün ${hours[0].open}–${hours[0].close}`
+  : hours.map((h) => `${dayNamesTr[h.day]} ${h.open}–${h.close}`).join(" · ");

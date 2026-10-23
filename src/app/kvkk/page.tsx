@@ -31,7 +31,9 @@ export default function KvkkPage() {
         <p>
           Web sitemizde form, üyelik, çerez tabanlı takip ya da reklam aracı kullanmıyoruz. Siteyi barındıran altyapı
           sağlayıcısı, güvenlik ve hizmetin sürekliliği için IP adresi ve tarayıcı bilgisi gibi teknik kayıtları sınırlı
-          süre tutabilir.
+          süre tutabilir. Konumumuzu göstermek için sayfalarımıza Google Haritalar yerleştirilmiştir; harita
+          yüklendiğinde IP adresiniz ve tarayıcı bilgileriniz Google tarafından, Google&apos;ın kendi gizlilik
+          politikasına göre işlenir.
         </p>
         <h2>WhatsApp ve telefon</h2>
         <p>
@@ -49,7 +51,7 @@ export default function KvkkPage() {
         </p>
         <h2>Yurt dışına aktarım</h2>
         <p>
-          Web sitemiz Vercel altyapısında barındırılır; WhatsApp hizmeti Meta tarafından sağlanır. Bu hizmetlerin
+          Web sitemiz Vercel altyapısında barındırılır; harita hizmeti Google, WhatsApp hizmeti Meta tarafından sağlanır. Bu hizmetlerin
           sunucuları yurt dışında bulunabileceğinden, bu kanallarla ilettiğiniz veriler KVKK m.9 kapsamında yurt dışına
           aktarılabilir. Bu kanalları kullanmak istemezseniz bize telefonla ya da salonumuza gelerek ulaşabilirsiniz.
         </p>

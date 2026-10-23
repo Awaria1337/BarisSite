@@ -82,3 +82,10 @@ _(araştırma sonrası doldurulacak)_
 - Eski site (baris-alas-6bd1.vercel.app): yalnız 8 iç mekân fotoğrafı (yüz yok). 7'si assets/photos'a (salon-01..06, beauty-02). Eski site şablon; saat çelişkisi (Pzt–Cmt 10–20, Pazar kapalı vs Google her gün 09–19), "2012'den beri", IG barisalaskuafor_canakkale → teyit bekliyor. research/08-old-site.md.
 - vibe-check 84 madde: 0 kritik, 3 high (G1 stok/örnek içerik, G2 domain, G3 commit/remote yok), VIBE_CHECK.md. KVKK metni + apple-icon + manifest + launch gate src/ geneli düzeltildi.
 - LH son: tüm sayfalar mobil 95–100, a11y/BP/SEO 100. Adım numarası text-kakao/30 kontrast hatası → text-kakao.
+
+## 2026-10-24 — Hero, map section, fonts
+- Home hero is now full-bleed real salon photo (salon-01) with dark overlay, per Mert's reference. Desktop top bar shows address + hours.
+- New LocationSection (map + contact card, **no appointment form**, Mert's call) above the footer on every page except /iletisim (gated by HideOn); /iletisim shows the map instead of the exterior photo.
+- Map = keyless Google Maps iframe, loading=lazy. CSP frame-src now allows www.google.com + maps.google.com. KVKK text mentions Google Maps.
+- Full-bleed hero made the image the mobile LCP (home fell to 90). Fix: self-hosted Inter Tight cut to wght 400–600 + Latin-1/Turkish glyphs (276 KB → 49 KB). All pages mobile 98–100 again.
+- Hosting is Vercel (project barissite); KVKK updated. Apex barisalas.com.tr 308 → www. DNS at hosting.com.tr pending (A @ 216.198.79.1 / 64.29.17.1, CNAME www → 6bf9fb6ead1e4d4c.vercel-dns-017.com.).
