@@ -141,10 +141,10 @@ export default function Home() {
           <div>
             <p className="text-sm text-karamel">Uzmanlık alanımız</p>
             <h2 id="uzmanlik" className="mt-4 text-5xl sm:text-6xl">
-              Kaynak saç ve <span className="accent text-karamel">protez saç</span>
+              Kaynak saç ve <span className="accent text-karamel">çıtçıt saç</span>
             </h2>
             <p className="mt-6 max-w-[48ch] text-krem/80">
-              Kendi saçınızdan ayırt edilmeyen kaynak saç; saç seyrelmesi ve kaybı yaşayanlar için size özel protez saç
+              Kendi saçınızdan ayırt edilmeyen kaynak saç ve çıtçıt saç; saç seyrelmesi ve kaybı yaşayanlar için size özel protez saç
               ve peruk. Renk ve dokuyu kendi saçınıza göre seçiyor, görüşmeleri sakin ve özel bir ortamda yapıyoruz.
             </p>
             <ul className="mt-8 space-y-4">
@@ -163,7 +163,7 @@ export default function Home() {
             <WhatsAppButton
               variant="light"
               className="mt-10"
-              text="Merhaba, kaynak saç / protez saç hakkında bilgi almak istiyorum."
+              text="Merhaba, kaynak saç / çıtçıt saç hakkında bilgi almak istiyorum."
             >
               Ücretsiz ön görüşme
             </WhatsAppButton>
