@@ -2,7 +2,7 @@
 // Everything rendered on the pages and in JSON-LD reads from here, so NAP stays
 // identical everywhere. `TODO(confirm` comments mark unverified research
 // findings (notes/research/01-business.md); `npm run qa:launch` fails while any
-// remain, and while testimonials are still `sample: true`.
+// remain.
 
 import type { ImageId } from "@/content/images.generated";
 
@@ -277,23 +277,6 @@ export const faq: { q: string; a: string }[] = [
     a: "L'Oréal Professionnel, Kérastase, Olaplex ve Selective Professional ürünleriyle çalışıyoruz; makyajda M·A·C kullanıyoruz.",
   },
   ...services.flatMap((s) => s.faq.slice(0, 1)),
-];
-
-export type Testimonial = { quote: string; name: string; service: string; sample?: true };
-
-// SAMPLE — placeholders written from themes in public Google reviews (honest
-// advice, natural extensions, modern short cuts). Replace with real reviews
-// shared with the customer's permission before launch (qa:launch blocks it).
-export const testimonials: Testimonial[] = [
-  { quote: "Saçıma gerekmeyen hiçbir işlemi önermedi. Dürüstlüğü için yıllardır buradayım.", name: "Ayşe K.", service: "Renk", sample: true },
-  { quote: "Kaynak saçımı soran herkes kendi saçım sanıyor. O kadar doğal.", name: "Elif D.", service: "Kaynak saç", sample: true },
-  { quote: "Kısa saça geçmekten korkuyordum, şimdi başka model düşünmüyorum.", name: "Merve A.", service: "Kesim", sample: true },
-  { quote: "Gelin saçım düğün boyunca hiç bozulmadı. Prova çok iyi bir fikirdi.", name: "Zeynep T.", service: "Gelin saçı", sample: true },
-  { quote: "İstediğim tonu tam tutturdular. Saçım hiç yıpranmadı.", name: "Selin Y.", service: "Balyaj", sample: true },
-  { quote: "Ekip çok sıcak, salon tertemiz. Kendimi rahat hissettim.", name: "Gizem Ö.", service: "Fön", sample: true },
-  { quote: "Peruk seçerken çok sabırlı davrandılar. Kendimi yeniden ben gibi hissettim.", name: "Hatice B.", service: "Protez saç", sample: true },
-  { quote: "Keratin sonrası saçım çok daha kolay şekil alıyor.", name: "Derya S.", service: "Keratin", sample: true },
-  { quote: "Çanakkale'de saçımı emanet ettiğim tek yer.", name: "Burcu E.", service: "Kesim ve renk", sample: true },
 ];
 
 export const galleryCategories = ["Salon", "Renk", "Kesim", "Gelin", "Kaynak ve protez", "Bakım"] as const;

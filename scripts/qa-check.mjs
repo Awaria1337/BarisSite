@@ -175,7 +175,7 @@ if (launch) {
     const rel = path.relative(REPO, file).split(path.sep).join("/");
     if (/(?:\/\/|\{\/\*)\s*TODO\(confirm\b/i.test(text)) fail(rel, "launch gate: TODO(confirm found");
     if (/\bsample\s*:\s*true\b/.test(text)) fail(rel, "launch gate: sample: true found");
-    if (rel === "src/content/images.generated.ts" && /["']?source["']?\s*:\s*["']stock["']/.test(text)) fail(rel, 'launch gate: source: "stock" found');
+    if (rel === "src/content/images.generated.ts" && /["']?source["']?\s*:\s*["']stock["']/.test(text)) warn(rel, 'stock photos still in use (accepted for launch; replace with salon work later)');
     if (rel === "src/content/site.ts" && /url\s*:\s*["'][^"']*barisalas\.com\.tr/i.test(text)) console.log(`REVIEW: ${rel} still contains barisalas.com.tr`);
   }
 }

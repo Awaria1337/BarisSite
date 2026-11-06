@@ -103,30 +103,6 @@
   .animate-marquee-y {
     animation: none;
   }
-
-  /* Testimonial columns become a plain scrollable list. */
-  .testimonials-columns {
-    max-height: 640px;
-    overflow-y: auto;
-  }
-  .testimonials-columns .animate-marquee-y {
-    width: 100%;
-    height: auto;
-    overflow: visible;
-  }
-  .testimonials-columns .animate-marquee-y > [aria-hidden="true"] {
-    display: none;
-  }
-  .testimonials-columns .desktop-columns {
-    height: auto;
-    min-height: 0;
-    align-items: start;
-  }
-  .testimonials-columns .desktop-columns > div {
-    height: auto;
-    min-height: 0;
-    overflow: visible;
-  }
 }
 
 /* View transitions between pages (React <ViewTransition> default). */

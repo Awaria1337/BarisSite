@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export const metadata = pageMetadata({
   title: "Sık Sorulan Sorular",
   description:
-    "Randevu, fiyat, çalışma saatleri, kaynak saç, protez saç, boya, keratin bakım ve gelin saçı hakkında sık sorulan sorular ve cevapları. Barış Alaş Kuaför, Çanakkale.",
+    "Randevu, fiyat, çalışma saatleri, kaynak saç, protez saç, boya, keratin bakım ve gelin saçı hakkında sık sorulan sorular. Barış Alaş Kuaför, Çanakkale.",
   path: "/sss/",
 });
 

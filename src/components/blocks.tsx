@@ -6,8 +6,7 @@ import { WhatsAppIcon } from "@/components/icons";
 import { JsonLdScript } from "@/components/json-ld";
 import { MotionPause } from "@/components/motion-pause";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
-import { TestimonialsColumns } from "@/components/ui/testimonials-columns";
-import { brands, rating, services, testimonials, whatsappLink, mapsLink, type Service } from "@/content/site";
+import { brands, rating, services, whatsappLink, mapsLink, type Service } from "@/content/site";
 import { breadcrumbJsonLd, type Crumb } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -244,7 +243,7 @@ export function BrandsMarquee() {
 
 export function TestimonialsSection() {
   return (
-    <section data-marquee aria-labelledby="yorumlar" className="overflow-hidden py-20 lg:py-28">
+    <section aria-labelledby="yorumlar" className="py-20 lg:py-28">
       <div className={cn(wrap, "text-center")}>
         <h2 id="yorumlar" className="text-5xl sm:text-6xl lg:text-7xl">
           {rating.count} yorum, <span className="accent">{rating.value.toLocaleString("tr-TR")} puan</span>
@@ -257,12 +256,6 @@ export function TestimonialsSection() {
           <span aria-hidden="true" className="tracking-[0.2em] text-kakao">★★★★★</span>
           Google yorumlarının tamamını okuyun
         </a>
-        <div className="mt-6">
-          <MotionPause />
-        </div>
-      </div>
-      <div className={cn(wrap, "mt-14")}>
-        <TestimonialsColumns items={testimonials} />
       </div>
     </section>
   );

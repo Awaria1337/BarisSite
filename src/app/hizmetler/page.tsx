@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const metadata = pageMetadata({
-  title: "Hizmetler: Kaynak Saç, Boya, Kesim, Gelin Saçı",
+  title: "Hizmetler: Kaynak Saç, Boya, Kesim, Gelin",
   description:
     "Çanakkale'de kaynak saç, protez saç ve peruk, boya, röfle, balyaj, kesim, fön, keratin bakım, gelin saçı, makyaj ve manikür.",
   path: "/hizmetler/",
