@@ -1,7 +1,7 @@
 // Cloudflare Workers static assets — serves the Next.js static export in out/.
 // https://developers.cloudflare.com/workers/static-assets/
 {
-  "name": "barisalas",
+  "name": "barissite",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./out",
