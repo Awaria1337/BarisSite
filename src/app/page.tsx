@@ -202,7 +202,7 @@ export default function Home() {
       <section aria-labelledby="hakkimizda-ozet" className="bg-fildisi py-20 lg:py-28">
         <div className={cn(wrap, "grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-20")}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-            <Picture id="about-01" fill sizes="(min-width: 1024px) 45vw, 100vw" />
+            <Picture id="salon-05" fill sizes="(min-width: 1024px) 45vw, 100vw" />
           </div>
           <div>
             <p className="eyebrow">Barış Alaş</p>

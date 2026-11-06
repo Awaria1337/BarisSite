@@ -41,7 +41,7 @@ export default function AboutPage() {
 
       <section aria-labelledby="hikaye" className={cn(wrap, "grid gap-12 pb-20 lg:grid-cols-2 lg:items-center lg:gap-20")}>
         <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-          <Picture id="about-01" fill priority sizes="(min-width: 1024px) 50vw, 100vw" />
+          <Picture id="salon-02" fill priority sizes="(min-width: 1024px) 50vw, 100vw" />
         </div>
         <div>
           <h2 id="hikaye" className="text-4xl sm:text-5xl">
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-label="Salon fotoğrafları" className={cn(wrap, "grid grid-cols-2 gap-3 py-20 sm:gap-4 lg:grid-cols-4")}>
-        {(["salon-01", "salon-02", "salon-03", "salon-04"] as const).map((id) => (
+        {(["salon-01", "salon-05", "salon-03", "salon-04"] as const).map((id) => (
           <div key={id} className="relative aspect-[3/4] overflow-hidden rounded-2xl">
             <Picture id={id} fill sizes="(min-width: 1024px) 25vw, 50vw" />
           </div>

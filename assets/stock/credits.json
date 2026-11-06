@@ -160,16 +160,6 @@
     "height": 1600
   },
   {
-    "file": "bridal-03.jpg",
-    "unsplashId": "oAIEk6xqYYc",
-    "pageUrl": "https://unsplash.com/photos/oAIEk6xqYYc",
-    "photographer": "Rikonavt",
-    "photographerUrl": "https://unsplash.com/@rikonavt",
-    "alt_tr": "Beyaz çiçekli saç aksesuarlı topuzuyla buketini tutan gelin",
-    "width": 2400,
-    "height": 3607
-  },
-  {
     "file": "extension-01.jpg",
     "unsplashId": "ofa5X21-Z2c",
     "pageUrl": "https://unsplash.com/photos/ofa5X21-Z2c",
@@ -200,32 +190,12 @@
     "height": 3456
   },
   {
-    "file": "care-01.jpg",
-    "unsplashId": "JZxYImAay2Y",
-    "pageUrl": "https://unsplash.com/photos/JZxYImAay2Y",
-    "photographer": "QUENTIN Mahe",
-    "photographerUrl": "https://unsplash.com/@quentinmahe",
-    "alt_tr": "Kuaför lavabosunda saç yıkama ve bakım uygulaması",
-    "width": 2400,
-    "height": 1600
-  },
-  {
     "file": "care-02.jpg",
     "unsplashId": "n-A9Mc7F7Fg",
     "pageUrl": "https://unsplash.com/photos/n-A9Mc7F7Fg",
     "photographer": "Tanya Yarosh",
     "photographerUrl": "https://unsplash.com/@monday88",
     "alt_tr": "Kahve tonlu fon önünde etiketsiz saç bakım ürünü şişeleri",
-    "width": 2400,
-    "height": 3600
-  },
-  {
-    "file": "beauty-01.jpg",
-    "unsplashId": "Bv8pYo9RJno",
-    "pageUrl": "https://unsplash.com/photos/Bv8pYo9RJno",
-    "photographer": "LOLA AZIZADA",
-    "photographerUrl": "https://unsplash.com/@kalpa_mahagamage",
-    "alt_tr": "Fırçayla göz makyajı uygulanan kadın, yan profil",
     "width": 2400,
     "height": 3600
   },
@@ -238,16 +208,6 @@
     "alt_tr": "Nude tonlarda ojeli, bakımlı tırnaklar ve yumuşak tüylü doku",
     "width": 2400,
     "height": 1350
-  },
-  {
-    "file": "about-01.jpg",
-    "unsplashId": "WXmHwPcFamo",
-    "pageUrl": "https://unsplash.com/photos/WXmHwPcFamo",
-    "photographer": "Adam Winger",
-    "photographerUrl": "https://unsplash.com/@awcreativeut",
-    "alt_tr": "Gülümseyerek müşterisinin saçına fön çeken kadın kuaför",
-    "width": 2400,
-    "height": 1602
   },
   {
     "file": "texture-01.jpg",

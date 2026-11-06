@@ -199,8 +199,8 @@ export const services: Service[] = [
       "Saçınızın ihtiyacına göre bakım öneriyoruz; gerekmeyen bir işlemi yapmıyoruz.",
     ],
     includes: ["Keratin bakım", "Brezilya fönü", "Olaplex bakım", "Bakım kürleri"],
-    image: "care-01",
-    gallery: ["care-01", "care-02", "cut-02"],
+    image: "texture-01",
+    gallery: ["texture-01", "care-02", "cut-02"],
     faq: [
       {
         q: "Keratin bakım saça zarar verir mi?",
@@ -225,7 +225,7 @@ export const services: Service[] = [
     ],
     includes: ["Gelin saçı", "Prova", "Topuz", "Nişan ve kına saçı", "Gelin makyajı", "Davet makyajı"],
     image: "bridal-01",
-    gallery: ["bridal-01", "bridal-02", "bridal-03"],
+    gallery: ["bridal-01", "bridal-02"],
     faq: [
       {
         q: "Gelin saçı için ne kadar önceden randevu almalıyım?",
@@ -245,8 +245,8 @@ export const services: Service[] = [
       "Günlük ya da davet makyajı için de randevu alabilirsiniz.",
     ],
     includes: ["Makyaj", "Kaş tasarımı", "Manikür", "Pedikür", "Ağda"],
-    image: "beauty-01",
-    gallery: ["beauty-01", "beauty-02"],
+    image: "beauty-02",
+    gallery: ["beauty-02", "salon-06"],
     faq: [],
   },
 ];
@@ -307,7 +307,7 @@ export const galleryItems: { id: ImageId; category: (typeof galleryCategories)[n
   { id: "extension-01", category: "Kaynak ve protez" },
   { id: "salon-02", category: "Salon" },
   { id: "color-02", category: "Renk" },
-  { id: "care-01", category: "Bakım" },
+  { id: "texture-01", category: "Bakım" },
   { id: "bridal-02", category: "Gelin" },
   { id: "cut-02", category: "Kesim" },
   { id: "color-03", category: "Renk" },
@@ -315,7 +315,6 @@ export const galleryItems: { id: ImageId; category: (typeof galleryCategories)[n
   { id: "extension-02", category: "Kaynak ve protez" },
   { id: "cut-03", category: "Kesim" },
   { id: "color-04", category: "Renk" },
-  { id: "bridal-03", category: "Gelin" },
   { id: "salon-04", category: "Salon" },
   { id: "extension-03", category: "Kaynak ve protez" },
   { id: "care-02", category: "Bakım" },
