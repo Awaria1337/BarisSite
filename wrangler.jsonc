@@ -5,6 +5,9 @@
   "compatibility_date": "2026-10-01",
   // Only redirects the bare domain to www; everything else is a static asset.
   "main": "worker/index.js",
+  // Keep the workers.dev URL and preview URLs (wrangler turns them off when routes exist).
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./out",
     "binding": "ASSETS",
