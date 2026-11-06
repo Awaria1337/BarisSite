@@ -3,11 +3,21 @@
 {
   "name": "barissite",
   "compatibility_date": "2026-10-01",
+  // Only redirects the bare domain to www; everything else is a static asset.
+  "main": "worker/index.js",
   "assets": {
     "directory": "./out",
+    "binding": "ASSETS",
+    // Run the Worker first so the apex -> www redirect happens before asset lookup.
+    "run_worker_first": true,
     // Unknown paths get out/404.html with a 404 status (not a blank page).
     "not_found_handling": "404-page",
     // Matches next.config trailingSlash: /galeri -> /galeri/
     "html_handling": "force-trailing-slash"
-  }
+  },
+  // Attached on every deploy; Cloudflare creates the DNS records and certificates.
+  "routes": [
+    { "pattern": "www.barisalas.com.tr", "custom_domain": true },
+    { "pattern": "barisalas.com.tr", "custom_domain": true }
+  ]
 }
