@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
   path: "/kvkk/",
 });
 
-// TODO(confirm): have the owner (veri sorumlusu) review this text; not legal advice.
+// Text approved by the owner (veri sorumlusu) 2026-11-06.
 export default function KvkkPage() {
   return (
     <>
@@ -43,7 +43,6 @@ export default function KvkkPage() {
           paylaşılmaz; WhatsApp hizmeti Meta tarafından sağlanır.
         </p>
         <h2>Saklama süresi</h2>
-        {/* TODO(confirm): retention period is the owner's decision. */}
         <p>
           Randevu ve iletişim için paylaştığınız bilgileri, işlem amacı ortadan kalktıktan sonra makul bir süre içinde
           ve en geç bir yıl sonunda siliyoruz. Yasal saklama yükümlülüğü olan kayıtları (örneğin faturalar) ilgili

@@ -19,12 +19,11 @@ export const site = {
 export const contact = {
   phoneDisplay: "0535 462 09 90",
   phoneE164: "+905354620990",
-  // TODO(confirm): is this number on WhatsApp?
   whatsapp: "905354620990",
 } as const;
 
 export const address = {
-  // Google Maps listing, verified 2026-10-22. TODO(confirm): Akol Otel location is current.
+  // Google Maps listing, verified 2026-10-22; Akol Otel location confirmed by the owner 2026-11-06.
   landmark: "Akol Otel",
   street: "Kayserili Ahmet Paşa Cd. No:32",
   neighborhood: "Cevat Paşa Mah.",
