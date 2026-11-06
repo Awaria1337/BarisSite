@@ -88,4 +88,4 @@ _(araştırma sonrası doldurulacak)_
 - New LocationSection (map + contact card, **no appointment form**, Mert's call) above the footer on every page except /iletisim (gated by HideOn); /iletisim shows the map instead of the exterior photo.
 - Map = keyless Google Maps iframe, loading=lazy. CSP frame-src now allows www.google.com + maps.google.com. KVKK text mentions Google Maps.
 - Full-bleed hero made the image the mobile LCP (home fell to 90). Fix: self-hosted Inter Tight cut to wght 400–600 + Latin-1/Turkish glyphs (276 KB → 49 KB). All pages mobile 98–100 again.
-- Hosting is Vercel (project barissite); KVKK updated. Apex barisalas.com.tr 308 → www. DNS at hosting.com.tr pending (A @ 216.198.79.1 / 64.29.17.1, CNAME www → 6bf9fb6ead1e4d4c.vercel-dns-017.com.).
+- Hosting is Cloudflare Workers (Worker barissite, static assets from out/, Workers Builds from GitHub main). DNS on Cloudflare (dane/olga). www.barisalas.com.tr canonical; apex 301 → www via worker/index.js. Vercel project deleted 2026-11-06.
